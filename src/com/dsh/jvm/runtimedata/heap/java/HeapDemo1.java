@@ -1,7 +1,7 @@
 package com.dsh.jvm.runtimedata.heap.java;
 
 /**
- * -Xms20m -Xmx20m
+ * -Xms20m(初始大小） -Xmx20m（最大大小）
  * @author shkstart  shkstart@126.com
  * @create 2020  16:42
  */

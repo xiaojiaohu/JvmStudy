@@ -1,6 +1,7 @@
 package com.dsh.jvm.gc.concept.java;
 
 /**
+ * -XX:+PrintGCDetails
  * @author shkstart  shkstart@126.com
  * @create 2020  14:57
  */
@@ -23,6 +24,7 @@ public class LocalVarGC {
 
     }
 
+    //不会被回收，因为它还存放在局部变量表索引为1的槽中
     public void localvarGC3() {
         {
             byte[] buffer = new byte[10 * 1024 * 1024];
@@ -33,6 +35,7 @@ public class LocalVarGC {
         //[Full GC (System.gc()) [PSYoungGen: 10736K->0K(76288K)] [ParOldGen: 48K->10649K(175104K)] 10784K->10649K(251392K), [Metaspace: 3252K->3252K(1056768K)], 0.0096328 secs] [Times: user=0.01 sys=0.01, real=0.01 secs]
     }
 
+    //会被回收，因为它还存放在局部变量表索引为1的槽中，但是后面定义的value把这个槽给替换了
     public void localvarGC4() {
         {
             byte[] buffer = new byte[10 * 1024 * 1024];
@@ -56,6 +59,6 @@ public class LocalVarGC {
 
     public static void main(String[] args) {
         LocalVarGC local = new LocalVarGC();
-        local.localvarGC5();
+        local.localvarGC3();
     }
 }

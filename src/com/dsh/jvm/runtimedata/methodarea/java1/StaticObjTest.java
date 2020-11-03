@@ -24,4 +24,6 @@ public class StaticObjTest {
         Test test = new StaticObjTest.Test();
         test.foo();
     }
+
+
 }

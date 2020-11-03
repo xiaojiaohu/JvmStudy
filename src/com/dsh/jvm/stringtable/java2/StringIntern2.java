@@ -4,8 +4,8 @@ package com.dsh.jvm.stringtable.java2;
  * 使用intern()测试执行效率：空间使用上
  *
  * 结论：对于程序中大量存在存在的字符串，尤其其中存在很多重复字符串时，使用intern()可以节省内存空间。
- *
- *
+ *第一种 1257
+ *第二种 3568
  * @author shkstart  shkstart@126.com
  * @create 2020  21:17
  */
@@ -18,8 +18,8 @@ public class StringIntern2 {
 
         long start = System.currentTimeMillis();
         for (int i = 0; i < MAX_COUNT; i++) {
-//            arr[i] = new String(String.valueOf(data[i % data.length]));
-            arr[i] = new String(String.valueOf(data[i % data.length])).intern();
+            arr[i] = new String(String.valueOf(data[i % data.length]));
+//            arr[i] = new String(String.valueOf(data[i % data.length])).intern();
 
         }
         long end = System.currentTimeMillis();

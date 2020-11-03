@@ -44,7 +44,7 @@ public class SoftReferenceTest {
         try {
             //让系统认为内存资源紧张、不够
 //            byte[] b = new byte[1024 * 1024 * 7];
-            byte[] b = new byte[1024 * 7168 - 399 * 1024];//恰好能放下数组又放不下u1的内存分配大小 不会报OOM
+            byte[] b = new byte[1024 * 7168 - 393 * 1024];//恰好能放下数组又放不下u1的内存分配大小 不会报OOM
         } catch (Throwable e) {
             e.printStackTrace();
         } finally {

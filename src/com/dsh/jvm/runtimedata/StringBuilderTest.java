@@ -13,7 +13,7 @@ package com.dsh.jvm.runtimedata;
 public class StringBuilderTest {
 
     //s1的声明方式是线程安全的
-    public static void method1(){
+     public static void method1(){
         StringBuilder s1 = new StringBuilder();
         s1.append("a");
         s1.append("b");
@@ -49,6 +49,8 @@ public class StringBuilderTest {
         }).start();
 
         method2(s);
+
+
 
     }
 

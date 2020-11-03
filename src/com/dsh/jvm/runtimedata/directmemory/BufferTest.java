@@ -4,9 +4,9 @@ import java.nio.ByteBuffer;
 import java.util.Scanner;
 
 /**
- *  IO                  NIO (New IO / Non-Blocking IO)
- *  byte[] / char[]     Buffer
- *  Stream              Channel
+ *  IO                          NIO (New IO / Non-Blocking IO) 非阻塞io
+ *  byte[] / char[]             Buffer
+ *  Stream                      Channel
  *
  * 查看直接内存的占用与释放
  * @author shkstart  shkstart@126.com
